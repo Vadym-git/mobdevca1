@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <ImageView
+        android:id="@+id/priceBackground"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:src="@drawable/price_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        />
+
+
+    <ImageView
+        android:id="@+id/iconBackground"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/icon_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/priceBackground"
+        android:layout_marginTop="-90dp"/>
+
+
+    <ImageView
+        android:id="@+id/coinIcon"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:src="@drawable/currency_bitcoin_24_icon"
+        app:layout_constraintStart_toStartOf="@id/iconBackground"
+        app:layout_constraintEnd_toEndOf="@id/iconBackground"
+        app:layout_constraintTop_toTopOf="@id/iconBackground"
+        app:layout_constraintBottom_toBottomOf="@id/iconBackground"/>
+
+    <TextView
+        android:id="@+id/coinPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:text="000"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/iconBackground"
+        android:layout_marginBottom="-50dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:text="$"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toStartOf="@id/coinPrice"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/iconBackground"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="-50dp"
+        />
+
+    <TextView
+        android:id="@+id/coinSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iconBackground"
+        app:layout_constraintBottom_toBottomOf="@id/priceBackground"
+        android:layout_marginBottom="8dp"
+        android:maxLength="6"
+        android:text="symbol"
+        android:textAllCaps="true"
+        android:textColor="@color/text_colour"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/coinName"
+        app:layout_constraintStart_toEndOf="@id/iconBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/coinSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Coin name is here"
+        android:maxLength="10"
+        />
+
+    <ImageView
+        android:id="@+id/saveBackground"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/icon_background"
+        />
+
+    <ImageView
+        android:id="@+id/buttonSaveCoin"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="@id/saveBackground"
+        app:layout_constraintBottom_toBottomOf="@id/saveBackground"
+        app:layout_constraintStart_toStartOf="@id/saveBackground"
+        app:layout_constraintEnd_toEndOf="@id/saveBackground"
+        android:src="@drawable/baseline_favorite_border_24"
+        />
+
+    <ImageView
+        android:id="@+id/backButtonBackground"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/icon_background"
+        />
+
+    <ImageView
+        android:id="@+id/buttonBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="@id/backButtonBackground"
+        app:layout_constraintBottom_toBottomOf="@id/backButtonBackground"
+        app:layout_constraintStart_toStartOf="@id/backButtonBackground"
+        app:layout_constraintEnd_toEndOf="@id/backButtonBackground"
+        android:src="@drawable/baseline_arrow_back_24"
+        />
+
+    <TextView
+        android:id="@+id/coinHigh24hText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High 24H:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/iconBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/coinHigh24hData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/n_a"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/coinHigh24hText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/coin24HChangeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change 24h:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/coinHigh24hText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/coin24HChangeData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/n_a"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/coin24HChangeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"/>
+
+
+    <TextView
+        android:id="@+id/coinLow24HText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Low 24h:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/coin24HChangeText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/coinLow24HData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/n_a"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/coinLow24HText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/coinVolumeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/coinLow24HText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/coinVolumeData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/n_a"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/coinVolumeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/coinMarketCapText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Market Cap:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/coinVolumeText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/coinMarketCapData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/n_a"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/coinMarketCapText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/coinRankText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rank:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/coinMarketCapText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/coinRankData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/n_a"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/coinRankText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SimpleCryptoCoinInfo</string>
+    <string name="favoriteTabName">Favorites</string>
+    <string name="searchTabName">Search</string>
+    <string name="selectTab">Tab selection</string>
+    <string name="n_a">N/A</string>
+</resources>
